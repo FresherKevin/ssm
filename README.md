@@ -12,4 +12,14 @@ Spring的学习之路
         * 系统内部的开发
     * 使用混合装配
         * 第三方包，系统外的接口和通用的配置  
-        
+* Spring AOP  
+    * 术语
+      * 1：切面（aspect）  
+      * 2：通知（adice）
+      * 3：引入（introduction）
+      * 4：切点（pointcut）
+      * 5：连接点（joinpoint）
+      * 6：织入（weaving）
+    * 使用@AspectJ注解
+      * @Before,@After,so on
+      
