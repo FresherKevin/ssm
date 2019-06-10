@@ -23,18 +23,14 @@ public class RoleAspect {
     public void before() {
         System.out.println("before ....");
     }
-  /*  @After("execution(* cn.nh.kevin.service.impl.RoleServiceImpl.printRoleInfo(..))")
-    public void after(Object object) {
-        System.out.println("after hello");
-    }*/
+    @After("execution(* cn.nh.kevin.service.impl.RoleServiceImpl.printRoleInfo(..))")
+    public void after(){
+        System.out.println("after");
+    }
 
     @AfterReturning("execution(* cn.nh.kevin.service.impl.RoleServiceImpl.printRoleInfo(..))")
-    public void afterReturning(Object object) {
-        System.out.println("正常返回");
-    }
-
-    @AfterThrowing("execution(* cn.nh.kevin.service.impl.RoleServiceImpl.printRoleInfo(..))")
-    public void afterThrowing(Object object) {
-        System.out.println("error");
+    public void afterReturning(){
+        System.out.println("after returning");
     }
 }
+
