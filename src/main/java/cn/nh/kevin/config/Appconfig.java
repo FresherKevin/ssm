@@ -32,7 +32,7 @@ public class Appconfig {
         RoleService rs = context.getBean(RoleServiceImpl.class);
         RoleController roleController = context.getBean(RoleController.class);
 
-        rs.printRoleInfo();
+        rs.printRoleInfo(null);
         System.out.println("now ");
         roleController.printhello();
         context.close();

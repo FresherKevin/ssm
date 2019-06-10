@@ -20,5 +20,5 @@ import org.springframework.stereotype.Component;
  */
 
 public interface RoleService {
-    public void printRoleInfo();
+    public void printRoleInfo(Role role);
 }

@@ -7,6 +7,7 @@
  */
 package cn.nh.kevin.aop;
 
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 
 /**
@@ -31,6 +32,16 @@ public class RoleAspect {
     @AfterReturning("execution(* cn.nh.kevin.service.impl.RoleServiceImpl.printRoleInfo(..))")
     public void afterReturning(){
         System.out.println("after returning");
+    }
+    @Around("execution(* cn.nh.kevin.service.impl.RoleServiceImpl.printRoleInfo(..))")
+    public void around(ProceedingJoinPoint joinPoint){
+        System.out.println("before around");
+        try {
+            joinPoint.proceed();
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+        System.out.println("after around");
     }
 }
 

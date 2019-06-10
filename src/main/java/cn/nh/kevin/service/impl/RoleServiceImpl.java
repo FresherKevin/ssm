@@ -22,20 +22,24 @@ import org.springframework.stereotype.Component;
 @Component("Kevin")
 public class RoleServiceImpl implements RoleService {
     @Autowired
-    private  Role role = null;
+    private  Role role1 = null;
 
     public Role getRole() {
-        return role;
+        return role1;
     }
 
     public void setRole(Role role) {
-        this.role = role;
+        this.role1 = role;
     }
 
     @Override
-    public void printRoleInfo() {
+    public void printRoleInfo(Role role) {
         System.out.println(role.getId());
         System.out.println(role.getNote());
         System.out.println(role.getRoleName());
+        System.out.println("***********");
+        System.out.println(role1.getId());
+        System.out.println(role1.getNote());
+        System.out.println(role1.getRoleName());
     }
 }

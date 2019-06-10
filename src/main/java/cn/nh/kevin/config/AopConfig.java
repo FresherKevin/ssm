@@ -31,6 +31,6 @@ public class AopConfig {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AopConfig.class);
         RoleService roleService = context.getBean(RoleService.class);
-        roleService.printRoleInfo();
+        roleService.printRoleInfo(null);
     }
 }

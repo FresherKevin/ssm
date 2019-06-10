@@ -43,7 +43,7 @@ public class RoleController {
 
 
     public void printhello(){
-        roleService.printRoleInfo();
-        roleService2.printRoleInfo();
+        roleService.printRoleInfo(null);
+        roleService2.printRoleInfo(null);
     }
 }

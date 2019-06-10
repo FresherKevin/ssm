@@ -7,6 +7,7 @@
  */
 package cn.nh.kevin.service.impl;
 
+import cn.nh.kevin.pojo.Role;
 import cn.nh.kevin.service.RoleService;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
@@ -31,7 +32,7 @@ public class RoleServiceImpl2 implements RoleService {
     }
 
     @Override
-    public void printRoleInfo() {
+    public void printRoleInfo(Role role) {
         System.out.println(q);
     }
 }
