@@ -23,14 +23,20 @@
     * 使用java的方式配置 javaConfig.java
     * 编程式事务（很少使用）
     * 声明式事务
+        * xml声明式事务配置
         * 核心在于   事务定义类（TransactionDefinition）
           * springioc会在启动的时候解析这些有关配置内容，并且放置到事务定义类TransactionDefinition中。
         * 底层技术 
-            * AOP技术
+            * 拦截器和AOP技术
         * 事务定义类TransactionDefinition
             * 这是一个类
             * 定义了七种传播行为
             * 五种隔离级别
             * get传播行为和隔离级别
             * 事务超时时间和是否只读事务
+         * 声明式事务的约定流程
+            1：根据事务管理器（platformTransactionManager的子类）创建事务
+            2：将事务定义往事务上设置
+            3：选取传播行为
+            4：决定是否回滚
 
