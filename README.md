@@ -22,4 +22,6 @@ Spring的学习之路
       * 6：织入（weaving）
     * 使用@AspectJ注解
       * @Before,@After,so on
+      * 难道是先写注解再写方法，进行编织吗？  
+      
       
