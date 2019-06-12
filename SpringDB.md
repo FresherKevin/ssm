@@ -16,6 +16,7 @@
     * 配置mapper     
         * 单个配置      MapperFactoryBean   
         * 扫描配置      MapperScannerConfigurer
+     * mybatis可以基于接口
 * * * *
 * 事务管理
     * 配置事务管理器
