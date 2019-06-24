@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 public class SMConfig {
     public static void main(String[] args) {
        //Logger logger = Logger.getLogger("SMConfig.class");
-        ApplicationContext context= new ClassPathXmlApplicationContext("spring-datasource.xml");
+        ApplicationContext context= new ClassPathXmlApplicationContext("cn/nh/kevin/spring-dataSource.xml");
         RoleMapper roleMapper = context.getBean(RoleMapper.class);
         Role role = new Role();
         role.setNote("23");

@@ -22,6 +22,6 @@ public class Test {
     @RequestMapping("/hello")
     public String Test(){
         System.out.println("hello");
-        return "test";
+        return "Test";
     }
 }

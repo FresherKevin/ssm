@@ -8,7 +8,6 @@
 package cn.nh.kevin.config;
 
 import cn.nh.kevin.pojo.Role;
-import com.sun.rowset.internal.Row;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -47,7 +46,7 @@ public class JdbcConfig {
         return list;
     }
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-dataSource.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("cn/nh/kevin/spring-dataSource.xml");
         JdbcTemplate jdbcTemplate = context.getBean(JdbcTemplate.class);
         JdbcConfig jdbcConfig = new JdbcConfig();
      //  jdbcConfig.insertRole(jdbcTemplate);

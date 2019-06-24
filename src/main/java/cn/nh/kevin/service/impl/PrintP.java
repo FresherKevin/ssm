@@ -1,6 +1,6 @@
 /**
  * Copyright (C), 2018-2019,
- * FileName: RoleServiceImpl2
+ * FileName: PrintP
  * Author:   Kevin
  * Date:     2019/6/3 13:35
  * Description:
@@ -19,7 +19,7 @@ import org.springframework.stereotype.Component;
  * @create 2019/6/3
  * @since 1.0.0
  */
-public class RoleServiceImpl2 implements RoleService {
+public class PrintP {
 
     private int q=0;
 
@@ -31,7 +31,6 @@ public class RoleServiceImpl2 implements RoleService {
         this.q = q;
     }
 
-    @Override
     public void printRoleInfo(Role role) {
         System.out.println(q);
     }
