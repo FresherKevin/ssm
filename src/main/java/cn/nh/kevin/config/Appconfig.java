@@ -10,7 +10,6 @@ package cn.nh.kevin.config;
 import cn.nh.kevin.controller.impl.RoleController;
 import cn.nh.kevin.pojo.Role;
 import cn.nh.kevin.service.RoleService;
-import cn.nh.kevin.service.impl.RoleServiceImpl;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
@@ -23,13 +22,13 @@ import org.springframework.context.annotation.ImportResource;
  * @since 1.0.0
  */
 @ComponentScan
-@ImportResource({"classpath:spring-dataSource.xml"})
+@ImportResource({"classpath:cn/nh/kevin/spring-dataSource.xml"})
 public class Appconfig {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Appconfig.class);
         Role role = context.getBean(Role.class);
 
-        RoleService rs = context.getBean(RoleServiceImpl.class);
+        RoleService rs = context.getBean(RoleService.class);
         RoleController roleController = context.getBean(RoleController.class);
 
         rs.printRoleInfo(null);

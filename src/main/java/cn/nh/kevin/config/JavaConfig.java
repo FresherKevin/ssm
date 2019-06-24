@@ -41,7 +41,7 @@ public class JavaConfig implements TransactionManagementConfigurer {
     *@param:
     *@return javax.sql.DataSource  数据源
     **/
-    @Bean(name = "dataSource")
+    @Bean(name = "dataSource1")
     public DataSource initDataSource(){
         if(dataSource!=null)
             return dataSource;
@@ -57,10 +57,10 @@ public class JavaConfig implements TransactionManagementConfigurer {
         }
         return dataSource;
     }
-    @Bean(name = "jdbcTemplate")
+    @Bean(name = "jdbcTemplate1")
     public JdbcTemplate initjdbcTemplate(){
         JdbcTemplate jdbcTemplate = new JdbcTemplate();
-        jdbcTemplate.setDataSource(dataSource);
+        jdbcTemplate.setDataSource(initDataSource());
         return jdbcTemplate;
     }
 
@@ -68,11 +68,8 @@ public class JavaConfig implements TransactionManagementConfigurer {
     @Bean(name = "transactionManager")
     public PlatformTransactionManager annotationDrivenTransactionManager() {
         DataSourceTransactionManager transactionManager = new DataSourceTransactionManager();
-        transactionManager.setDataSource(dataSource);
+        transactionManager.setDataSource(initDataSource());
         return transactionManager;
     }
 
-    public static void main(String[] args) {
-
-    }
 }

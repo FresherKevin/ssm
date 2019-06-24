@@ -14,8 +14,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 /**
  * 〈〉
  *
@@ -25,7 +23,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 @Configuration
 @ComponentScan(basePackages = {"cn.nh.kevin"})
-@ImportResource({"classpath:spring-dataSource.xml"})
+@ImportResource({"classpath:cn/nh/kevin/spring-dataSource.xml"})
 public class XmlAopConfig {
     public static void main(String[] args) {
 

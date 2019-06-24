@@ -25,7 +25,7 @@ import org.springframework.transaction.support.DefaultTransactionDefinition;
  */
 public class TestTransaction {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring-transaction.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("cn/nh/kevin/spring-transaction.xml");
         JdbcTemplate jdbcTemplate = context.getBean(JdbcTemplate.class);
         /* 事务定义类接口
         * TransactionDefinition===============

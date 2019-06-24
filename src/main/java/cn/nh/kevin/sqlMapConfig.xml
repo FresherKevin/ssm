@@ -20,6 +20,6 @@
  
     <!-- 指定映射器路径 -->
     <mappers>
-        <mapper resource="cn/nh/kevin/mapper/RoleMapper.xml" />
+        <mapper resource="cn/nh/kevin/Mapper/RoleMapper.xml" />
     </mappers>
 </configuration>

@@ -25,7 +25,7 @@ import java.sql.SQLException;
  * @create 2019/6/3
  * @since 1.0.0
  */
-//@Component
+@Component
 public class RoleDBServiceImpl implements RoleDBService {
     @Autowired
     DataSource dataSource = null;

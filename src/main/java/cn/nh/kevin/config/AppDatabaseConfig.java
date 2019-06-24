@@ -9,12 +9,10 @@ package cn.nh.kevin.config;
 
 import cn.nh.kevin.pojo.Teacher;
 import cn.nh.kevin.service.RoleDBService;
-import cn.nh.kevin.service.impl.RoleDBServiceImpl;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
 
-import javax.sql.DataSource;
 import java.sql.SQLException;
 
 /**
@@ -25,7 +23,8 @@ import java.sql.SQLException;
  * @since 1.0.0
  */
 @ComponentScan(basePackages = {"cn.nh.kevin"})
-@ImportResource({"classpath:spring-dataSource.xml"})
+@ImportResource({"classpath:cn/nh/kevin/spring-dataSource.xml"})
+//@MapperScan(basePackages = "cn.nh.kevin.Mapper")
 public class AppDatabaseConfig {
     public static void main(String[] args) throws SQLException {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppDatabaseConfig.class);
